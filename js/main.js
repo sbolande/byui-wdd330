@@ -5,8 +5,10 @@ const links = [
     }
 ];
 
-links.forEach(link => {
-    document
-        .getElementById("#links")
-        .append(`<li><a href="${link.url}">${link.label}</a></li>`);
-});
+function createLinks() {
+    links.forEach(link => {
+        document
+            .getElementById("#links")
+            .append(`<li><a href="${link.url}">${link.label}</a></li>`);
+    });
+}
