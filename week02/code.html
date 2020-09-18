@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 02 Code</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="WDD330 Week02 Code Activities" />
+        <meta name="author" content="Seth Bolander" />
+    </head>
+
+    <body>
+        <h1>Code Sandbox: Eloqent JavaScript</h1>
+        <div class="activity">
+            <h2>2.1 - Looping a Triangle</h2>
+            <pre>
+                <code>
+                    let point = '';
+                    while (point.length < 7) {
+                        point += '#';
+                        console.log(point);
+                    }
+                </code>
+            </pre>
+            <samp class="output"></samp>
+        </div>
+        <div class="activity">
+            <h2>2.2 - FizzBuzz</h2>
+            <pre>
+                <code>
+                    for (let i = 0; i <= 100; i++) {
+                        let num;
+                        if (i % 5 === 0 && i % 3 === 0) num = "FizzBuzz";
+                        else if (i % 3 === 0) num = "Fizz";
+                        else if (i % 5 === 0) num = "Buzz";
+                        else num = i;
+                        console.log(num);
+                    }
+                </code>
+            </pre>
+        </div>
+    </body>
+    <script lang="javascript">
+        function loopingATriangle() {
+            let point = '';
+            while (point.length < 7) {
+                point += '#';
+                console.log(point);
+            }
+        }
+
+        function fizzBuzz() {
+            for (let i = 1; i <= 100; i++) {
+                let num;
+                if (i % 5 === 0 && i % 3 === 0) num = "FizzBuzz";
+                else if (i % 3 === 0) num = "Fizz";
+                else if (i % 5 === 0) num = "Buzz";
+                else num = i;
+                console.log(num);
+            }
+        }
+
+        function chessboard(size = 8) {
+            let row = "";
+            let space = [ ' ', '#' ];
+            let current = 0;
+            for (let x = 0; x < size; x++) {
+                for (let y = 0; y < size; y++) {
+                    row += space[current++ % space.length];
+                }
+                console.log(row);
+                row = "";
+            }
+        }
+
+        function min(a, b) {
+            return (a < b) ? a : b;
+        }
+        console.log(min(0, 10));
+        console.log(min(0, -10));
+
+        function isEven(num) {
+            if (num < 0) throw new RangeError("Must supply a positive, whole number.");
+            if (num === 0) {
+                return true;
+            } else if (num === 1) {
+                return false;
+            } else {
+                return isEven(num - 2);
+            }
+        }
+        console.log(isEven(50));
+        console.log(isEven(75));
+        console.log(isEven(-1));
+
+        function countChar(sample, letter) {
+            let count = 0;
+            for (let i = 0; i < sample.length; i++) {
+                if (sample[i] === letter) count++;
+            }
+            return count;
+        }
+        function countBs(sample) {
+            return countChar(sample, 'B');
+        }
+        console.log(countBs("BBC"));
+        console.log(countChars("kakkerlak", 'k'));
+
+        function range(start, end, step = 1) {
+            let value = [];
+            if (start < end) {
+                for (let i = start; i <= end; i += step) {
+                    value.push(i);
+                }
+            } else {
+                for (let i = start; i >= end; i += step) {
+                    value.push(i);
+                }
+            }
+            return value;
+        }
+        function sum(numbers) {
+            let value = 0;
+            numbers.forEach(num => value += num);
+            return value;
+        }
+        console.log(range(1, 10));
+        console.log(range(5, 2, -1));
+        console.log(sum(range(1, 10)));
+
+        function reverseArray(sample) {
+            let value = [];
+            for (let i = sample.length - 1; i >= 0; i--) {
+                value.push(sample[i]);
+            }
+            return value;
+        }
+        function reverseArrayInPlace(sample) {
+            let current;
+            for (let i = sample.length - 1; i >= Math.floor((sample.length - 1) / 2); i--) {
+                current = sample[i];
+                sample[i] = sample[sample.length - 1 - i];
+                sample[sample.length - 1 - i] = current;
+            }
+        }
+        console.log(reverseArray(["A", "B", "C"]));
+        let arrayValue = [1, 2, 3, 4, 5];
+        reverseArrayInPlace(arrayValue);
+        console.log(arrayValue);
+
+        
+    </script>
+</html>
