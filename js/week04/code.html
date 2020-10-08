@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 04 Code</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="WDD330 Week04 Code Activities" />
+        <meta name="author" content="Seth Bolander" />
+    </head>
+
+    <body>
+        <h1>Code Sandbox: Eloqent JavaScript</h1>
+        <div class="activity">
+            <h2>6.1 - A Vector Type</h2>
+            <pre>
+                <code>
+                    class Vec {
+                        constructor(x, y) {
+                            this.x = x;
+                            this.y = y;
+                        }
+                        get length() {
+                            return Math.sqrt((this.x * this.x) + (this.y * this.y));
+                        }
+                        plus(value) {
+                            this.x += value.x;
+                            this.y += value.y;
+                            return this;
+                        }
+                        minus(value) {
+                            this.x -= value.x;
+                            this.y -= value.y;
+                            return this;
+                        }
+                    };
+    
+                    console.log(new Vec(1, 2).plus(new Vec(2, 3)));
+                    console.log(new Vec(1, 2).minus(new Vec(2, 3)));
+                    console.log(new Vec(3, 4).length);
+                </code>
+            </pre>
+            <script lang="javascript">
+                class Vec {
+                    constructor(x, y) {
+                        this.x = x;
+                        this.y = y;
+                    }
+                    get length() {
+                        return Math.sqrt((this.x * this.x) + (this.y * this.y));
+                    }
+                    plus(value) {
+                        this.x += value.x;
+                        this.y += value.y;
+                        return this;
+                    }
+                    minus(value) {
+                        this.x -= value.x;
+                        this.y -= value.y;
+                        return this;
+                    }
+                };
+
+                console.log(new Vec(1, 2).plus(new Vec(2, 3)));
+                console.log(new Vec(1, 2).minus(new Vec(2, 3)));
+                console.log(new Vec(3, 4).length);
+            </script>
+        </div>
+        <div class="activity">
+            <h2>6.2 - Group</h2>
+            <pre>
+                <code>
+                </code>
+            </pre>
+            <script lang="javascript">
+                
+            </script>
+        </div>
+    </body>
+</html>

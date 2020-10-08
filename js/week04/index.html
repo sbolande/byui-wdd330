@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 04 Notes</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="WDD330 Week04 Notes" />
+        <meta name="author" content="Seth Bolander" />
+    </head>
+
+    <body>
+        <div id="forms" class="section">
+            <h2 id="subhead1" class="subhead">Forms</h2>
+            <ul class="notes">
+                <li>Forms contain elements of type: input, select, button, etc.</li>
+                <li>Forms are processed using back-end, but it's becoming more common to pre-process via the front-end.</li>
+                <li>Each form control starts with an initial value that is changed via user input or JavaScript.</li>
+            </ul>
+        </div>
+        <div id="form_elements" class="section">
+            <h2 id="subhead2" class="subhead">Accessing Form Elements</h2>
+            <ul class="notes">
+                <li>Legacy DOM provides <code>const form = document.forms[0];</code> to be able to access the list of forms on the document.</li>
+                <li>The <code>const form = document.forms['form_name'];</code> also works, and <code>const input = form['input_name'];</code> works for accessing form elements.</li>
+            </ul>
+        </div>
+        <div id="form_properties" class="section">
+            <h2 id="subhead3" class="subhead">Form Properties and Methods</h2>
+            <ul class="notes">
+                <li>A form can be submitted by a submit input, submit button, or an image input. <code>form.submit();</code> works from the JavaScript.</li>
+                <li>A form can be reset by a reset button or the JavaScript <code>form.reset();</code>.</li>
+                <li>The action property can be changed by using <code>form.action = 'different_url';</code>.</li>
+            </ul>
+        </div>
+        <div id="retrieving_form_values" class="section">
+            <h2 id="subhead5" class="subhead">Form Events</h2>
+            <ul class="notes">
+                <li>The placeholder attribute for inputs will not provide the actual/default value of the input, but can aide the user in </li>
+            </ul>
+        </div>
+        <div id="disabling_submit" class="section">
+            <h2 id="subhead11" class="subhead">Disabling the Submit Button</h2>
+            <ul class="notes">
+                <li>You can set the disabled property of input elements to prevent the user from accessing them, then you could provide JavaScript to enable them after the user meets some criteria!</li>
+            </ul>
+        </div>
+    </body>
+</html>
