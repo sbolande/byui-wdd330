@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Group 1 - Week04</title>
+        <meta charset="UTF-8" />
+        <script lang="javascript">
+            let currentPlayer = "O";
+
+            function move(cell) {
+                if (cell.innerText === "" && !didPlayerWin() && !isGameTied()) {
+                    cell.innerText = currentPlayer;
+                    if (didPlayerWin()) document.getElementById("winner").innerText = `"${currentPlayer}" WINS!`;
+                    if (isGameTied()) document.getElementById("winner").innerText = "TIED GAME!";
+                    player = nextPlayer();
+                }
+            }
+            function nextPlayer() {
+                // ternary to switch between O and X
+                currentPlayer = currentPlayer == "O" ? "X" : "O";
+            }
+            function reset() {
+                var cells = document.getElementsByClassName("cell");
+                Array.from(cells).forEach(cell => cell.innerText = "");
+                document.getElementById("winner").innerText = "";
+            }
+            function didPlayerWin() {
+                let cell_0 = document.getElementById("cell_0").innerText;
+                let cell_1 = document.getElementById("cell_1").innerText;
+                let cell_2 = document.getElementById("cell_2").innerText;
+                let cell_3 = document.getElementById("cell_3").innerText;
+                let cell_4 = document.getElementById("cell_4").innerText;
+                let cell_5 = document.getElementById("cell_5").innerText;
+                let cell_6 = document.getElementById("cell_6").innerText;
+                let cell_7 = document.getElementById("cell_7").innerText;
+                let cell_8 = document.getElementById("cell_8").innerText;
+                
+                if (
+                    // check horizontal
+                    (cell_0 === cell_1 && cell_1 === cell_2 && cell_0 !== "") ||
+                    (cell_3 === cell_4 && cell_4 === cell_5 && cell_3 !== "") ||
+                    (cell_6 === cell_7 && cell_7 === cell_8 && cell_6 !== "") ||
+                    // check vertical
+                    (cell_0 === cell_3 && cell_3 === cell_6 && cell_0 !== "") ||
+                    (cell_1 === cell_4 && cell_4 === cell_7 && cell_1 !== "") ||
+                    (cell_2 === cell_5 && cell_5 === cell_8 && cell_2 !== "") ||
+                    // check diagonal
+                    (cell_0 === cell_4 && cell_4 === cell_8 && cell_0 !== "") ||
+                    (cell_2 === cell_4 && cell_4 === cell_6 && cell_2 !== "")
+                ) return true;
+                else return false;
+            }
+            function isGameTied() {
+                let cell_0 = document.getElementById("cell_0").innerText;
+                let cell_1 = document.getElementById("cell_1").innerText;
+                let cell_2 = document.getElementById("cell_2").innerText;
+                let cell_3 = document.getElementById("cell_3").innerText;
+                let cell_4 = document.getElementById("cell_4").innerText;
+                let cell_5 = document.getElementById("cell_5").innerText;
+                let cell_6 = document.getElementById("cell_6").innerText;
+                let cell_7 = document.getElementById("cell_7").innerText;
+                let cell_8 = document.getElementById("cell_8").innerText;
+                if (
+                    cell_0 !== "" && cell_1 !== "" && cell_2 !== "" &&
+                    cell_3 !== "" && cell_4 !== "" && cell_5 !== "" &&
+                    cell_6 !== "" && cell_7 !== "" && cell_8 !== ""
+                ) return true;
+                else return false;
+            }
+        </script>
+        <style>
+            .board {
+                display: grid;
+                width: 300px;
+                height: 300px;
+                grid-template-columns: auto auto auto;
+            }
+            .cell {
+                display: flex;
+                width: 100px;
+                height: 100px;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                font-weight: bold;
+                border: 3px solid black;
+            }
+            #cell_0,#cell_1,#cell_2 {
+                border-top: none;
+            }
+            #cell_0,#cell_3,#cell_6 {
+                border-left: none;
+            }
+            #cell_6,#cell_7,#cell_8 {
+                border-bottom: none;
+            }
+            #cell_2,#cell_5,#cell_8 {
+                border-right: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="board">
+            <div id="cell_0" class="cell" onclick="move(this);"></div>
+            <div id="cell_1" class="cell" onclick="move(this);"></div>
+            <div id="cell_2" class="cell" onclick="move(this);"></div>
+            <div id="cell_3" class="cell" onclick="move(this);"></div>
+            <div id="cell_4" class="cell" onclick="move(this);"></div>
+            <div id="cell_5" class="cell" onclick="move(this);"></div>
+            <div id="cell_6" class="cell" onclick="move(this);"></div>
+            <div id="cell_7" class="cell" onclick="move(this);"></div>
+            <div id="cell_8" class="cell" onclick="move(this);"></div>
+        </div>
+        <br>
+        <br>
+        <button id="reset" onclick="reset();">RESET</button>
+        <p id="winner"></p>
+    </body>
+</html>
