@@ -10,7 +10,21 @@ body {
     padding-bottom: 5%;
 }
 
+hr {
+    border: solid 4px black;
+    border-radius: 10px;
+    background-color: black;
+    width: 100%;
+}
+
 /* TODO LIST */
+#todo_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
 .todo_item {
     display: flex;
     flex-direction: row;
@@ -31,9 +45,9 @@ body {
 }
 
 .isComplete {
-    background-color: #50dd78;
-    border: solid 3px #50dd78;
-    border-bottom: solid 3px #50aa78;
+    background-color: #48d470;
+    border: solid 3px #48d470;
+    border-bottom: solid 3px #3eb660;
 }
 
 .notComplete {
@@ -95,11 +109,37 @@ body {
 
 /* NEW TASK */
 #new_task {
+    width: 85%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+}
+
+#new_task_name, #add_task {
+    border-radius: 7px;
+    text-align: center;
+}
+
+#new_task_name {
+    height: 32px;
+    width: 60%;
+    font-size: 16px;
+    border: solid 3px white;
+    border-bottom: solid 3px #cccccc;
+    background-color: white;
 }
 
 #add_task {
-    
+    height: 40px;
+    margin-left: 7px;
+    font-size: 30px;
+    background-color: #48d470;
+    border: solid 3px #48d470;
+    border-bottom: solid 3px #3eb660;
+}
+
+#new_task_name:hover, #add_task:hover {
+    border: solid 3px black;
 }
