@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge One: Todo</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="WDD330 Challenge One: Todo" />
+        <meta name="author" content="Seth Bolander" />
+        <script src="./main.js"></script>
+    </head>
+    <body>
+        <div>
+            <div id="todo_list"></div>
+            <hr />
+            <div id="sort">
+                <div id="remaining"></div>
+                <button id="sort_all" class="action" onclick="showAll();">All</button>
+                <button id="sort_active" class="action" onclick="showActive();">Active</button>
+                <button id="sort_completed" class="action" onclick="showCompleted();">Completed</button>
+            </div>
+        </div>
+        <hr />
+        <div id="new_task">
+            <input type="text" id="new_task_name" placeholder="New Task" />
+            <button id="add_task" onclick="addTodo(document.getElementById('new_task_name').value);">+</button>
+        </div>
+        <div id="errors"></div>
+    </body>
+    <script>showActive();</script>
+</html>

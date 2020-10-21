@@ -17,6 +17,9 @@ const links = [
     }, {
         label: "Week05 Notes",
         url: "week05/index.html"
+    }, {
+        label: "Challenge01: TODO Application",
+        url: "challenge01/index.html"
     }
 ];
 
