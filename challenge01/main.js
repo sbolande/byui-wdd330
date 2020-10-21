@@ -5,6 +5,8 @@ class Todo {
         this.completed = false;
     }
 }
+
+var currentFilter = showAll;
  
 /************************* STORAGE *************************/
 async function getTodos() {
@@ -50,18 +52,18 @@ async function addTodo(newTodo) {
         await createEntry(new Todo(content));
     }
     document.getElementById("new_task_name").value = "";
-    await showActive();
+    await currentFilter();
 }
 
 async function completeTodo(event) {
     await completeEntry(event.currentTarget.todo_id);
-    await showActive();
+    await currentFilter();
 }
 
 async function deleteTodo(event) {
     document.getElementById(event.currentTarget.todo_id).remove();
     await deleteEntry(event.currentTarget.todo_id);
-    await showActive();
+    await currentFilter();
 }
 
 function displayTodo(todo) {
@@ -76,7 +78,10 @@ function displayTodo(todo) {
     completed.onclick = completeTodo;
     completed.todo_id = todo.id;
     if (todo.completed) {
-        completed.innerText = "X";
+        completed.innerHTML = "&#10003;";
+        completed.setAttribute("class", "isComplete");
+    } else {
+        completed.setAttribute("class", "notComplete");
     }
     
     // create content div
@@ -105,13 +110,14 @@ async function showAll() {
     document.getElementById("todo_list").innerHTML = "";
     let todos = await getTodos();
     if (todos !== null) {
-        showCount(`${todos.length} tasks`);
+        showCount(`${todos.length} TASKS`);
         if (todos.length > 0) {
             todos.forEach(todo => {
                 displayTodo(todo);
             });
         }
     }
+    currentFilter = showAll;
 }
 
 async function showActive() {
@@ -119,13 +125,14 @@ async function showActive() {
     let todos = await getTodos();
     todos = todos.filter(todo => !todo.completed);
     if (todos !== null) {
-        showCount(`${todos.length} tasks remaining`);
+        showCount(`${todos.length} TASKS REMAINING`);
         if (todos.length > 0) {
             todos.forEach(todo => {
                 displayTodo(todo);
             });
         }
     }
+    currentFilter = showActive;
 }
 
 async function showCompleted() {
@@ -133,13 +140,14 @@ async function showCompleted() {
     let todos = await getTodos();
     todos = todos.filter(todo => todo.completed);
     if (todos !== null) {
-        showCount(`${todos.length} tasks completed`);
+        showCount(`${todos.length} TASKS COMPLETED`);
         if (todos.length > 0) {
             todos.forEach(todo => {
                 displayTodo(todo);
             });
         }
     }
+    currentFilter = showCompleted;
 }
 
 function showCount(message) {

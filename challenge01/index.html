@@ -6,16 +6,17 @@
         <meta name="description" content="WDD330 Challenge One: Todo" />
         <meta name="author" content="Seth Bolander" />
         <script src="./main.js"></script>
+        <link rel="stylesheet" href="./main.css" />
     </head>
     <body>
-        <div>
-            <div id="todo_list"></div>
-            <hr />
-            <div id="sort">
-                <div id="remaining"></div>
-                <button id="sort_all" class="action" onclick="showAll();">All</button>
-                <button id="sort_active" class="action" onclick="showActive();">Active</button>
-                <button id="sort_completed" class="action" onclick="showCompleted();">Completed</button>
+        <div id="todo_list"></div>
+        <br />
+        <div id="filters">
+            <p id="remaining"></p>
+            <div id="filters_btns">
+                <button id="filter_all" class="action" onclick="showAll();">ALL</button>
+                <button id="filter_active" class="action" onclick="showActive();">ACTIVE</button>
+                <button id="filter_completed" class="action" onclick="showCompleted();">COMPLETED</button>
             </div>
         </div>
         <hr />
@@ -25,5 +26,8 @@
         </div>
         <div id="errors"></div>
     </body>
-    <script>showActive();</script>
+    <script lang="javascript">
+        // preliminary load
+        showAll();
+    </script>
 </html>

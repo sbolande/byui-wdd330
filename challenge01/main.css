@@ -1,0 +1,105 @@
+html {
+    background-color: #00a2e2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 85%;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* TODO LIST */
+.todo_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 7px 2% 7px 2%;
+    border: solid 2px black;
+    border-radius: 7px;
+    margin-top: 4px;
+    background-color: #00709c;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: red;
+    border: solid 3px red;
+    border-bottom: solid 3px #cc0000;
+}
+
+.isComplete {
+    background-color: #50dd78;
+    border: solid 3px #50dd78;
+    border-bottom: solid 3px #50aa78;
+}
+
+.notComplete {
+    background-color: white;
+    border: solid 3px white;
+    border-bottom: solid 3px #cccccc;
+}
+
+.todo_item button {
+    width: 5.5%;
+    height: 35px;
+    font-size: 20px;
+    color: black;
+    border-radius: 7px;
+}
+
+.todo_item button:hover { border: solid 3px black; }
+
+/* FILTERS */
+#filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width:1200px) {
+    #filters {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+#filters_btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#filters_btns button {
+    height: 40px;
+    width: 180px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 16px;
+    color: black;
+    border-radius: 7px;
+    border: solid 3px white;
+    border-bottom: solid 3px #cccccc;
+    background-color: white;
+}
+
+#filters_btns button:hover { border: solid 3px black; }
+
+#remaining {
+    text-align: center;
+    font-size: 22px;
+}
+
+/* NEW TASK */
+#new_task {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#add_task {
+    
+}
