@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 07 Notes</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="WDD330 Week07 Notes" />
+        <meta name="author" content="Seth Bolander" />
+    </head>
+
+    <body>
+        <div class="section">
+            <h2 id="subhead1" class="subhead">Transforms</h2>
+            <ul class="notes">
+                <li>Transform lets you "translate, rotate, scale, and/or skew any element on the page."</li>
+                <li>There are both 2D and 3D transformations.</li>
+                <li>Transforms do NOT work on inline elements, add some other display value than inline for transformations.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 id="subhead1" class="subhead">Translation</h2>
+            <ul class="notes">
+                <li>Translation lets you "move elements left, right, up, or down."</li>
+                <li>The <code>translate(x, y)</code> function moves elements right 'x' and down 'y'.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 id="subhead1" class="subhead">Scaling</h2>
+            <ul class="notes">
+                <li>The following scaling functions scale an element by given factors:
+                    <ul>
+                        <li><code>scale(x, y)</code> scales horizontally 'x' and vertically 'y'.</li>
+                        <li><code>scale(n)</code> scales horizontally and vertically 'n'.</li>
+                        <li><code>scaleX(x)</code> scales horizontally 'x'.</li>
+                        <li><code>scaleY(y)</code> scales vertically 'y'.</li>
+                    </ul>
+                </li>
+            </ul>
+        <div class="section">
+            <h2 id="subhead1" class="subhead">Rotation</h2>
+            <ul class="notes">
+                <li>The <code>roate(angle)</code> function can rotate "an element around the point of origin by a specified angle value."</li>
+                <li>The following are valid provided angle value types:
+                    <ul>
+                        <li>deg</li>
+                        <li>grad</li>
+                        <li>rad</li>
+                        <li>turn</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 id="subhead1" class="subhead">Skew</h2>
+            <ul class="notes">
+                <li>The <code>skew(x, y)</code> function "specifies a skew along the x and y axes."</li>
+                <li>'x' specifies the skew on the x axis, and 'y' specifies the skew on the y axis; both are provided in deg, turn, rad, or grad.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 id="subhead1" class="subhead">Changing the Origin of the Transform</h2>
+            <ul class="notes">
+                <li>The <code>transform-origin</code> property defaults to the center of the object but can be changed.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 id="subhead1" class="subhead">Choose Your Ordering Carefully</h2>
+            <ul class="notes">
+                <li>Transform functions' order DOES matter: "if you rotate before translating, your translate direction will be on the rotated axis."</li>
+            </ul>
+        </div>
+    </body>
+</html>
