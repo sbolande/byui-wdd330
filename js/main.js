@@ -30,6 +30,9 @@ const links = [
     }, {
         label: "Week09 Notes",
         url: "week09/index.html"
+    }, {
+        label: "Week10 Earthquake",
+        url: "week10/earthquake.html"
     }
 ];
 
