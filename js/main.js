@@ -36,6 +36,9 @@ const links = [
     }, {
         label: "Week10 Notes",
         url: "week10/index.html"
+    }, {
+        label: "Challenge02: MTG API Search",
+        url: "challenge02/index.html"
     }
 ];
 

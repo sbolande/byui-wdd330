@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./main.js"></script>
+        <title>MTG Search</title>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <div id="basic" class="search_div">
+            <a href="./advanced.html">Advanced Search</a>
+            <br>
+            <form id="search_form" name="search" action="">
+                <div>
+                    <h1>Magic: The Gathering</h1>
+                    <h2>Search</h2>
+                </div>
+                <ul>
+                    <li>
+                        <label class="search_label" for="name">Card Name</label>
+                        <input type="text" name="name">
+                    </li>
+                    <li>
+                        <label class="search_label" for="colors[]">Search by Color</label><br>
+                        <input type="checkbox" name="colors[]" value="white"><label for="white"><img class="mana" alt="white" title="white" src="https://gatherer.wizards.com/images/Redesign/White_Mana.png"></label>
+                        <input type="checkbox" name="colors[]" value="blue"><label for="blue"><img class="mana" alt="blue" title="blue" src="https://gatherer.wizards.com/images/Redesign/Blue_Mana.png"></label>
+                        <input type="checkbox" name="colors[]" value="black"><label for="black"><img class="mana" alt="black" title="black" src="https://gatherer.wizards.com/images/Redesign/Black_Mana.png"></label>
+                        <input type="checkbox" name="colors[]" value="red"><label for="red"><img class="mana" alt="red" title="red" src="https://gatherer.wizards.com/images/Redesign/Red_Mana.png"></label>
+                        <input type="checkbox" name="colors[]" value="green"><label for="green"><img class="mana" alt="green" title="green" src="https://gatherer.wizards.com/images/Redesign/Green_Mana.png"></label>
+                    </li>
+                    <li><input class="submit" type="button" value="SEARCH" onclick="searchCards();"></li>
+                </ul>
+                <input type="hidden" name="search_type" value="basic">
+            </form>
+        </div>
+    </body>
+</html>

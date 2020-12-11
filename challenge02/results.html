@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./main.js"></script>
+        <title>MTG Search</title>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+
+    <body>
+        <a href="./index.html">Back to Search</a>
+        <div id="loading"><p class="loading">Fetching cards</p></div>
+        <ul id="results">
+            <!-- <li>
+                <ul>
+                    <li><p><strong>${card.name}</strong> - &#40;${card.setName}#41;</p></li>
+                    <li><img alt="${card.name}" src="${card.imageUrl}"></li>
+                </ul>
+            </li> -->
+        </ul>
+    </body>
+    <script>fetchCards(window.location.href);</script>
+</html>

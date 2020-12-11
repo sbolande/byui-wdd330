@@ -1,0 +1,5 @@
+Idea One: Magic The Gathering Card Search/Collection
+
+Purpose: A MTG card search engine implementing AJAX requests to the MTG API (https://docs.magicthegathering.io/#documentationgetting_started (Links to an external site.)) that uses localStorage to save cards to a "collection."
+Audience: People who want to track what cards they own.
+Data Sources: MTG API, localStorage
