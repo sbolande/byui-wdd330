@@ -1,5 +1,5 @@
 html {
-    background-color: #00a2e2;
+    background-color: #006b60;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -34,14 +34,14 @@ hr {
     border: solid 2px black;
     border-radius: 7px;
     margin-top: 4px;
-    background-color: #00709c;
+    background-color: #00728f;
     align-items: center;
 }
 
 .delete-btn {
-    background-color: red;
-    border: solid 3px red;
-    border-bottom: solid 3px #cc0000;
+    background-color: #ff4d39;
+    border: solid 3px #ff4d39;
+    border-bottom: solid 3px #e93c28;
 }
 
 .isComplete {
